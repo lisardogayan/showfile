@@ -2,7 +2,8 @@
    References:
    https://www.includehelp.com/cpp-programs/read-text-file.aspx
    https://codescracker.com/cpp/program/cpp-program-read-and-display-file.htm  
-   http://timmurphy.org/2010/09/27/reading-from-a-file-in-c/  */
+   http://timmurphy.org/2010/09/27/reading-from-a-file-in-c/  
+   */
 		
 // reading a text file
 #include <iostream>
@@ -28,16 +29,32 @@ int main()
 		std::cin.get();
 		return 1;
 	}
+    // request if line numbers must be shown
+    bool showlinenumbers = false;
+    char c;
+    cout << "Do you want to show line numbers? (Y/N)? ";
+    cin >> c;
+    if (toupper( c ) == 'Y') showlinenumbers = true;	
+    cout << std::endl;
     // read each line and print it to the screen
     int lineCount = 0;
     std::string line;
 	while(ifile.eof()==0)
 	{
-        std::getline (ifile, line);
-        std::cout << ++lineCount 
-                  << ": "
-                  << line
-                  << std::endl;
+        if (showlinenumbers)
+        {
+            std::getline (ifile, line);
+            std::cout << ++lineCount 
+                      << ": "
+                      << line
+                      << std::endl;
+        }
+        else 
+        {
+            std::getline (ifile, line);
+            std::cout << line
+                      << std::endl;
+        }
 	}
 	cout<<"\n";
 	ifile.close();

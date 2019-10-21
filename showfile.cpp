@@ -1,7 +1,8 @@
 /* C++ Program - Read and Display File 
    References:
    https://www.includehelp.com/cpp-programs/read-text-file.aspx
-   https://codescracker.com/cpp/program/cpp-program-read-and-display-file.htm  */
+   https://codescracker.com/cpp/program/cpp-program-read-and-display-file.htm  
+   http://timmurphy.org/2010/09/27/reading-from-a-file-in-c/  */
 		
 // reading a text file
 #include <iostream>
@@ -15,19 +16,28 @@ int main()
 	system("clear"); //clears the screen
 	ifstream ifile;
 	char s[100], fname[20];
-	cout<<"Enter file name to read and display its content (like file.txt) : ";
-	cin>>fname;
+	cout << "Enter file name to read and display its content (like file.txt) : ";
+	cin >> fname;
 	ifile.open(fname);
 	if(!ifile)
 	{
-		cout<<"Error in opening file..!!";
+		cout << "Error in opening file: " 
+             << fname
+             << ". Aborting program."
+             << std::endl;
 		std::cin.get();
-		exit(0);
+		return 1;
 	}
+    // read each line and print it to the screen
+    int lineCount = 0;
+    std::string line;
 	while(ifile.eof()==0)
 	{
-        ifile>>s;
-        cout<<s<<" ";
+        std::getline (ifile, line);
+        std::cout << ++lineCount 
+                  << ": "
+                  << line
+                  << std::endl;
 	}
 	cout<<"\n";
 	ifile.close();

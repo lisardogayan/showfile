@@ -2,7 +2,8 @@
    References:
    https://www.includehelp.com/cpp-programs/read-text-file.aspx
    https://codescracker.com/cpp/program/cpp-program-read-and-display-file.htm  
-   http://timmurphy.org/2010/09/27/reading-from-a-file-in-c/  */
+   http://timmurphy.org/2010/09/27/reading-from-a-file-in-c/  
+   */
 		
 // reading a text file
 #include <iostream>

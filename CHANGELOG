@@ -1,0 +1,27 @@
+## [2019-10-22]
+## Added
+- This changelog file is added by [@lisardogayan] (https://github.com/lisardogayan).
+
+## [2019-10-21]
+## Added
+- Added Lazarillo de Tormes file to check with big file by [@lisardogayan] (https://github.com/lisardogayan).
+
+## [2019-10-21]
+## Modified
+- Solution to issue, so file will be shown line by line by [@lisardogayan] (https://github.com/lisardogayan).
+
+## [2019-10-21]
+## Added
+- Makefile is added  by [@lisardogayan] (https://github.com/lisardogayan).
+
+## [2019-10-21]
+## Modified
+-  Gitignore is modified to not consider vscode files by [[@lisardogayan] (https://github.com/lisardogayan).
+
+## [2019-10-21]
+## Modified
+-  README.md modified and .vscode/launch.json removed. by [[@lisardogayan] (https://github.com/lisardogayan).
+
+## [2019-10-21]
+## Added
+-  Showfile initial version by [[@lisardogayan] (https://github.com/lisardogayan).
